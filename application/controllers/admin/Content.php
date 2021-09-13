@@ -35,7 +35,7 @@ class Content extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên bài viết', 'required|is_unique[db_content.title]');
 		if ($this->form_validation->run() == TRUE) 
 		{
@@ -85,7 +85,7 @@ class Content extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên bài viết', 'required');
 		//$this->form_validation->set_rules('detail', 'Chi tiết sản phẩm', 'required');
 		if ($this->form_validation->run() == TRUE) 

@@ -35,7 +35,7 @@ class Product extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên sản phẩm', 'required|is_unique[db_product.name]');
 		$this->form_validation->set_rules('catid', 'Loại sản phẩm', 'required');
 		$this->form_validation->set_rules('producer', 'Nhà cung cấp', 'required');
@@ -133,7 +133,7 @@ class Product extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên sản phẩm', 'required');
 		$this->form_validation->set_rules('catid', 'Loại sản phẩm', 'required');
 		$this->form_validation->set_rules('producer', 'Nhà cung cấp', 'required');
@@ -221,7 +221,7 @@ class Product extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('number', 'Số lượng', 'required');
 		if ($this->form_validation->run() == TRUE){
 			$mydata= array(

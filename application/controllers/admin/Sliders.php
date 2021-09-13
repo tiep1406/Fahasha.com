@@ -35,7 +35,7 @@ class Sliders extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên hình ảnh', 'required');
 		$this->form_validation->set_rules('link', 'Liên kết', 'required');
 		if ($this->form_validation->run() == TRUE) 
@@ -85,7 +85,7 @@ class Sliders extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên sản phẩm', 'required');
 		$this->form_validation->set_rules('link', 'Liên kết', 'required');
 		if ($this->form_validation->run() == TRUE) 

@@ -19,7 +19,7 @@ class Category extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('Phantrang');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$limit=10;
 		$current=$this->phantrang->PageCurrent();
 		$first=$this->phantrang->PageFirst($limit, $current);
@@ -34,7 +34,7 @@ class Category extends CI_Controller {
 	public function insert()
 	{
 		$d=getdate();
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'Loại sản phẩm', 'required|is_unique[db_category.name]|max_length[25]');
@@ -81,7 +81,7 @@ class Category extends CI_Controller {
 		$this->data['row']=$this->Mcategory->category_detail($id);
 		$d=getdate();
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', 'Tên danh mục', 'required|max_length[25]');
 		if ($this->form_validation->run() == TRUE) 

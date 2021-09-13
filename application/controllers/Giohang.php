@@ -27,7 +27,7 @@ class Giohang extends CI_Controller {
             redirect('info-order','refresh');
         }else{
             $d=getdate();
-            $this->load->library('alias');
+            $this->load->library('Alias');
             $today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
             $this->load->library('form_validation');
             $this->form_validation->set_rules('email', 'Địa chỉ email', 'required|is_unique[db_customer.email]');

@@ -31,7 +31,7 @@ class Useradmin extends CI_Controller {
 		$d=getdate();
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('fullname', 'Họ và tên', 'required');
 		$this->form_validation->set_rules('phone', 'Số điện thoại', 'required|is_unique[db_user.phone]');
 		$this->form_validation->set_rules('email', 'Địa chỉ email', 'required|is_unique[db_user.email]');
@@ -77,7 +77,7 @@ class Useradmin extends CI_Controller {
 		$d=getdate();
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('fullname', 'Họ và tên', 'required');
 		$this->form_validation->set_rules('password', 'Mật khẩu', 'required|callback_check_password');	
 		if ($this->form_validation->run() == TRUE) 

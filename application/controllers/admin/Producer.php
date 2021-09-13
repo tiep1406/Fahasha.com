@@ -31,7 +31,7 @@ class Producer extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên nhà cung cấp', 'required|is_unique[db_producer.name]');
 		$this->form_validation->set_rules('code', 'Mã code', 'required|is_unique[db_producer.code]');
 		$this->form_validation->set_rules('keyword', 'Từ khóa', 'required');
@@ -63,7 +63,7 @@ class Producer extends CI_Controller {
 		$today=$d['year']."/".$d['mon']."/".$d['mday']." ".$d['hours'].":".$d['minutes'].":".$d['seconds'];
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->library('alias');
+		$this->load->library('Alias');
 		$this->form_validation->set_rules('name', 'Tên nhà cung cấp', 'required');
 		$this->form_validation->set_rules('keyword', 'Từ khóa', 'required');
 		if ($this->form_validation->run() == TRUE) {
