@@ -15,7 +15,7 @@ class Tintuc extends CI_Controller {
 	public function index(){
         $aurl= explode('/',uri_string());
 		$catlink=$aurl[0];
-		$this->load->library('phantrang');
+		$this->load->library('Phantrang');
 		$limit=10;
 		$current=$this->phantrang->PageCurrent();
 		$first=$this->phantrang->PageFirst($limit, $current);

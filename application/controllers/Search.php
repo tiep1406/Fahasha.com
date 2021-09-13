@@ -12,7 +12,7 @@ class Search extends CI_Controller {
     }
     
 	public function index(){
-		$this->load->library('phantrang');
+		$this->load->library('Phantrang');
 		$key = $_GET['search'];
 		$aurl= explode('/',uri_string());
 		$url = $aurl[0].'?search='.str_replace(' ', '+', $key);

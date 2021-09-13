@@ -9,7 +9,7 @@ class Sanpham extends CI_Controller {
         $this->load->model('frontend/Mcategory');
         $this->data['com']='sanpham';
         $this->load->library('session');
-        $this->load->library('phantrang');
+        $this->load->library('Phantrang');
     }
     
 	public function index(){
@@ -33,7 +33,7 @@ class Sanpham extends CI_Controller {
                 $od='desc';
             }
         }
-        $this->load->library('phantrang');
+        $this->load->library('Phantrang');
         $limit=24;
         $current=$this->phantrang->PageCurrent();
         $first=$this->phantrang->PageFirst($limit, $current);
@@ -77,7 +77,7 @@ class Sanpham extends CI_Controller {
                 $od='desc';
             }
         }
-        $this->load->library('phantrang');
+        $this->load->library('Phantrang');
         $limit=24;
         $current=$this->phantrang->PageCurrent();
         $first=$this->phantrang->PageFirst($limit, $current);

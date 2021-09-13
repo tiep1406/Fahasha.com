@@ -20,7 +20,7 @@ class Orders extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->library('phantrang');
+		$this->load->library('Phantrang');
 		$limit=10;
 		$current=$this->phantrang->PageCurrent();
 		$first=$this->phantrang->PageFirst($limit, $current);
@@ -62,7 +62,7 @@ class Orders extends CI_Controller {
 
 	public function recyclebin()
 	{
-		$this->load->library('phantrang');
+		$this->load->library('Phantrang');
 		$limit=10;
 		$current=$this->phantrang->PageCurrent();
 		$first=$this->phantrang->PageFirst($limit, $current);
