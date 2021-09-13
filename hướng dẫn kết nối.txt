@@ -1,0 +1,9 @@
+Mở phầm mềm XAMPP 
+khởi động Apache và MySQL
+http://localhost/dashboard/(có thể thay đổi tùy theo công port(s) của máy)
+Truy cập vào phpMyAdmin 
+Click vào Nhập -> chọn tệp (da_bansach.sql)-> Thực hiện (CTRL+ENTER)
+Đường dẫn tới trang web localhost/da_bansach/(Đường dẫn có thể thay đổi tùy theo công port(s) của máy)
+Đường dẫn tới trang Admin localhost/da_bansach/admin/
+tài khoản : supperadmin
+mật khẩu  : 123456
